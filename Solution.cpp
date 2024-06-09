@@ -43,7 +43,7 @@ private:
         while (left <= right) {
             if (((verticalReflectionAxis != getVerticalAxis(points[left][0], points[right][0])))
                 || (!pointsHaveSymetricVerticalCoordinates(points[left][1], points[right][1])
-                    && !pointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0]))) {
+                && !pointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0]))) {
                 return false;
             }
             ++left;
@@ -65,7 +65,7 @@ private:
 
     bool pointsStandAtTheVerticalReflectionAxis(int xFirst, int xSecond)  const {
         return abs(xFirst - verticalReflectionAxis) < EPSILON
-	       && abs(xSecond - verticalReflectionAxis) < EPSILON;
+	    && abs(xSecond - verticalReflectionAxis) < EPSILON;
     }
 
     bool pointsHaveSymetricVerticalCoordinates(int yFirst, int ySecond) const {
