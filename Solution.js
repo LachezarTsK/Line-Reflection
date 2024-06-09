@@ -26,8 +26,8 @@ function allPointsAreSymetricInRespectToTheVerticalReflectionAxis(points) {
 
     while (left <= right) {
         if (((this.verticalReflectionAxis !== getVerticalAxis(points[left][0], points[right][0])))
-                || (!pointsHaveSymetricVerticalCoordinates(points[left][1], points[right][1])
-                        && !pointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0]))) {
+            || (!pointsHaveSymetricVerticalCoordinates(points[left][1], points[right][1])
+            && !pointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0]))) {
             return false;
         }
         ++left;
@@ -74,7 +74,7 @@ function getVerticalAxis(xFirst, xSecond) {
  */
 function pointsStandAtTheVerticalReflectionAxis(xFirst, xSecond) {
     return Math.abs(xFirst - this.verticalReflectionAxis) < this.EPSILON
-            & Math.abs(xSecond - this.verticalReflectionAxis) < this.EPSILON;
+        && Math.abs(xSecond - this.verticalReflectionAxis) < this.EPSILON;
 }
 
 /**
