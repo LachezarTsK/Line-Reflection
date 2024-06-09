@@ -30,8 +30,7 @@ class Solution {
         while (left <= right) {
             if (((verticalReflectionAxis != getVerticalAxis(points[left][0], points[right][0])))
                 || (!pointsHaveSymetricVerticalCoordinates(points[left][1], points[right][1])
-                        && !pointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0]))
-            ) {
+                        && !pointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0]))) {
                 return false
             }
             ++left
