@@ -44,7 +44,7 @@ func allPointsAreSymetricInRespectToTheVerticalReflectionAxis(points [][]int) bo
 		if (verticalReflectionAxis != getVerticalAxis(points[left][0], points[right][0])) ||
 		   (!pointsHaveSymetricVerticalCoordinates(points[left][1], points[right][1]) &&
 		    !pointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0])) {
-			return false
+		   return false
 		}
 		left++
 		right--
@@ -85,7 +85,7 @@ func getVerticalAxis(xFirst int, xSecond int) float64 {
 
 func pointsStandAtTheVerticalReflectionAxis(xFirst int, xSecond int) bool {
 	return math.Abs(float64(xFirst)-verticalReflectionAxis) < EPSILON &&
-		   math.Abs(float64(xSecond)-verticalReflectionAxis) < EPSILON
+	       math.Abs(float64(xSecond)-verticalReflectionAxis) < EPSILON
 }
 
 func pointsHaveSymetricVerticalCoordinates(yFirst int, ySecond int) bool {
