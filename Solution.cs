@@ -28,8 +28,8 @@ public class Solution
         while (left <= right)
         {
             if (((verticalReflectionAxis != GetVerticalAxis(points[left][0], points[right][0])))
-                    || (!PointsHaveSymetricVerticalCoordinates(points[left][1], points[right][1])
-                        && !PointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0])))
+               || (!PointsHaveSymetricVerticalCoordinates(points[left][1], points[right][1])
+               && !PointsStandAtTheVerticalReflectionAxis(points[left][0], points[right][0])))
             {
                 return false;
             }
@@ -69,7 +69,7 @@ public class Solution
     private bool PointsStandAtTheVerticalReflectionAxis(int xFirst, int xSecond)
     {
         return Math.Abs(xFirst - verticalReflectionAxis) < EPSILON
-               && Math.Abs(xSecond - verticalReflectionAxis) < EPSILON;
+            && Math.Abs(xSecond - verticalReflectionAxis) < EPSILON;
     }
 
     private bool PointsHaveSymetricVerticalCoordinates(int yFirst, int ySecond)
